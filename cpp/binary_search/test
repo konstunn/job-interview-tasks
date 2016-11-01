@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ ! -f $1 ];
+then
+	echo "Using: ./test <executable>" 
+	exit
+fi
+
+for file in ./tests/[0-9][0-9]
+do
+	echo -n "running test $file ..."
+	./$1 < $file > tmp 
+	diff tmp $file.a
+	echo "done."
+done
+
+rm tmp 
