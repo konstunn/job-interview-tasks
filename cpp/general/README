@@ -1,0 +1,9 @@
+
+C++ features tested:
+
+- inheritance
+- virtual methods, virtual destructors 
+- constructors that throws exceptions 
+
+Things to learn:
+- smart pointers
